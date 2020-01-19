@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>IBM Advanced Data Science Capstone</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body style="background: #000;">
+ <div class="login">
+  <img src="{{url_for('static', filename='Indian_Premier_League_Logo.png')}}" />
+	<h1>IPL PLAYER EVALUATION TOOL</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+     <form action="{{ url_for('predict')}}"method="post">
+     	<input type="text" placeholder="Matches Played" name="matches" required="required" />
+         <input type="text" placeholder="Runs scored" name="runs_scored" required="required" />
+         <input type="text" placeholder="6s" name="6s" required="required" />
+         <input type="text" placeholder="4s" name="4s" required="required" />
+         <input type="text" placeholder="2s" name="2s" required="required" />
+         <input type="text" placeholder="Boundaries Scored First 6 Overs" name="boundaries_first_6" required="required" />
+         <input type="text" placeholder="Boundaries Scored Last 5 overs" name="boundaries_last_5" required="required" />
+         <input type="text" placeholder="Runs Scored in Middle Overs" name="runs_middle" required="required" />
+         <input type="text" placeholder="Not outs" name="not_outs" required="required" />
+         <input type="text" placeholder="Runs scored in First 6" name="runs_first_6" required="required" />
+         <input type="text" placeholder="Runs scored in last 5" name="runs_last_5" required="required" />
+         <input type="text" placeholder="Wickets" name="wickets_taken" required="required" />
+         <input type="text" placeholder="Wickets First 6 overs" name="wickets_first_6" required="required" />
+         <input type="text" placeholder="Wickets Last 5 overs" name="wickets_last_5" required="required" />
+         <input type="text" placeholder="Economy first 6 overs" name="economy_first_6" required="required" />
+         <input type="text" placeholder="Economy Last 5 overs" name="economy_last_5" required="required" />
+         <input type="text" placeholder="Economy Middle overs" name="economy_middle" required="required" />
+         <input type="text" placeholder="Boundaries Given" name="boundaries_given" required="required" />
+         <input type="text" placeholder="Extras Given" name="extras_given" required="required" />
+         <button type="submit" class="btn btn-primary btn-block btn-large">Evaluate Player</button>
+     </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+   {{ spoints }}
+
+ </div>
+</body>
+</html>
