@@ -8,3 +8,5 @@ The app.py file consists of the deployed application. Run the app.py to get the 
 The static folder consists of css files that are used for adding styling in the web page.
 
 The .pkl are model that are selected from the model.py files.
+
+Youtube Video Link: https://www.youtube.com/watch?v=eY0cydlV7QE
