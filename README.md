@@ -2,7 +2,7 @@
 IBM COURSERA ADVANCED DATA SCIENCE - IPL PLAYER EVALUATION TOOL - ARAVIND MADAN MOHAN
 
 
-The app.py file consists of the deployed application. Run the app.py to get the solution working. The templates folder contains the index.html file which is base temlate for the web application.
+The app.py file consists of the deployed application. Run the app.py to get the solution working. The templates folder contains the index.html file which is base template for the web application.
 
 
 The static folder consists of css files that are used for adding styling in the web page.
